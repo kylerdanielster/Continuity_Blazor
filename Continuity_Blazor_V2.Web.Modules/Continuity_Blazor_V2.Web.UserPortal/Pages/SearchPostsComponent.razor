@@ -1,0 +1,41 @@
+﻿@page "/posts"
+
+@inject ISearchPosts searchPosts
+
+<h3>Search Posts</h3>
+<br/>
+
+<SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+
+<br/>
+
+<div class="list-group">
+    @if (posts != null && posts.Count() > 0)
+    {
+        @foreach (var post in posts)
+        {
+            <NavLink class="list-group-item list-group-item-action" href="@($"post/{post.Id}")">@post.Title</NavLink>
+        }
+    }
+    else
+    {
+        <div class="list-group-item">No posts found</div>
+    }
+</div>
+
+@code {      
+
+    private IEnumerable<Post> posts;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        posts = searchPosts.Execute();
+    }
+
+    private void HandleSearch(string filter)
+    {
+        posts = searchPosts.Execute(filter);
+    }
+}

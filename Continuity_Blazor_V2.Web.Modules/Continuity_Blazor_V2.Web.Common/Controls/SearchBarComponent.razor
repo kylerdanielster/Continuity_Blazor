@@ -1,0 +1,47 @@
+﻿@*
+
+    **Note the extra code on the input element.** 
+    
+    This it to prevent a page reload when the 'Enter' key is pressed when the field is focused. 
+    In general, I think this is the bahavior we would want for every form, ie. we would want it to 
+    perform the forms 'onclick' action for the form button when the 'Enter key is pressed.
+
+    This is apparently how this should be resolved per the documentation.
+    https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1-preview-2/
+    https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0#prevent-default-actions
+
+*@
+
+<form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+        <label class="mr-2">Search:</label>
+        <input class="form-control" id="filter" @onkeypress="KeyHandler" @onkeypress:preventDefault @bind-value="filter" />
+    </div>
+    <button type="button" class="btn btn-primary mb-2" @onclick="HandleSearch">Search</button>
+</form>
+
+@code {
+    private string filter;
+
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+
+    // pass the filter value to the parent component
+    // the parent needs to know what the filter is
+    private void HandleSearch()
+    {
+        OnSearch.InvokeAsync(filter);
+    }
+
+    private void KeyHandler(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            HandleSearch();
+            filter = "";
+            return;
+        }
+
+        filter += e.Key.ToString();
+    }
+}

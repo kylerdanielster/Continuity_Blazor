@@ -1,0 +1,36 @@
+﻿@page "/post/{id:int}"
+
+@inject IViewPost viewPost
+
+<h3>Post Details</h3>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">@post.Title</h5>
+        <p class="card-text">@post.Body</p>
+    </div>
+    <ul class="list-group list-group-flush pl-3 pr-3">
+        @foreach (var comment in post.Comments)
+        {
+            <li class="list-group-item">@comment</li>
+        }
+    </ul>
+</div>
+
+<NavLink class="btn btn-outline-secondary" href="posts">Back To Posts</NavLink>
+
+@code {
+    private Post post;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (Id > 0)
+            post = viewPost.Execute(Id);
+    }
+
+}

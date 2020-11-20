@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Continuity_Blazor.Web-2709E08B-B4EC-47F9-B873-B198A305BE2A</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor_V2.CoreBusiness.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.UseCases\Continuity_Blazor_V2.UseCases.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.AdminPortal\Continuity_Blazor_V2.Web.AdminPortal.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.Common\Continuity_Blazor_V2.Web.Common.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.UserPortal\Continuity_Blazor_V2.Web.UserPortal.csproj" />
+    <ProjectReference Include="..\Plugins\Continuity_Blazor_V2.DataStore\Continuity_Blazor_V2.DataStore.HardCoded.csproj" />
+  </ItemGroup>
+
+</Project>
