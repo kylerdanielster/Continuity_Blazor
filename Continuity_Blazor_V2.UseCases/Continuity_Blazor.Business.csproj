@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor_V2.CoreBusiness.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor.Data.csproj" />
   </ItemGroup>
 
 </Project>

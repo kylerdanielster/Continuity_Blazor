@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor_V2.CoreBusiness", "Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor_V2.CoreBusiness.csproj", "{8D03DB1C-3074-47A9-BE19-E6FEBCB4ECD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor.Data", "Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor.Data.csproj", "{8D03DB1C-3074-47A9-BE19-E6FEBCB4ECD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor_V2.UseCases", "Continuity_Blazor_V2.UseCases\Continuity_Blazor_V2.UseCases.csproj", "{3EC6187E-79BA-4774-AD5D-600373DB427A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor.Business", "Continuity_Blazor_V2.UseCases\Continuity_Blazor.Business.csproj", "{3EC6187E-79BA-4774-AD5D-600373DB427A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{67D6343E-762B-4AB4-8F8C-FC8A3EEC1D09}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{67D6343E-762B-4AB4-8F8C-FC8A3EEC1D09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor_V2.DataStore.HardCoded", "Plugins\Continuity_Blazor_V2.DataStore\Continuity_Blazor_V2.DataStore.HardCoded.csproj", "{89474786-C4EA-4E94-BB5B-814EB3EA94C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Continuity_Blazor.Dal.HardCoded", "Plugins\Continuity_Blazor_V2.DataStore\Continuity_Blazor.Dal.HardCoded.csproj", "{89474786-C4EA-4E94-BB5B-814EB3EA94C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Continuity_Blazor_V2.Web.Modules", "Continuity_Blazor_V2.Web.Modules", "{151B4C15-F0D5-4FEC-885E-58187E8C93EF}"
 EndProject

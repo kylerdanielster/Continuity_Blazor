@@ -11,12 +11,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
-    <ProjectReference Include="..\Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor_V2.CoreBusiness.csproj" />
-    <ProjectReference Include="..\Continuity_Blazor_V2.UseCases\Continuity_Blazor_V2.UseCases.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.CoreBusiness\Continuity_Blazor.Data.csproj" />
+    <ProjectReference Include="..\Continuity_Blazor_V2.UseCases\Continuity_Blazor.Business.csproj" />
     <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.AdminPortal\Continuity_Blazor_V2.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.Common\Continuity_Blazor_V2.Web.Common.csproj" />
     <ProjectReference Include="..\Continuity_Blazor_V2.Web.Modules\Continuity_Blazor_V2.Web.UserPortal\Continuity_Blazor_V2.Web.UserPortal.csproj" />
-    <ProjectReference Include="..\Plugins\Continuity_Blazor_V2.DataStore\Continuity_Blazor_V2.DataStore.HardCoded.csproj" />
+    <ProjectReference Include="..\Plugins\Continuity_Blazor_V2.DataStore\Continuity_Blazor.Dal.HardCoded.csproj" />
   </ItemGroup>
 
 </Project>

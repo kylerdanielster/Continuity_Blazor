@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Continuity_Blazor_V2.UseCases\Continuity_Blazor_V2.UseCases.csproj" />
+    <ProjectReference Include="..\..\Continuity_Blazor_V2.UseCases\Continuity_Blazor.Business.csproj" />
   </ItemGroup>
 
 </Project>

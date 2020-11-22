@@ -1,9 +1,12 @@
+using Continuity_Blazor.Business.Models;
+using Continuity_Blazor.Business.Posts;
 using Continuity_Blazor.Web.Areas.Identity;
 using Continuity_Blazor.Web.Data;
 using Continuity_Blazor_V2.DataStore;
 using Continuity_Blazor_V2.UseCases.PluginInterfaces.DataStore;
 using Continuity_Blazor_V2.UseCases.SearchPostScreen;
 using Continuity_Blazor_V2.UseCases.ViewPostScreen;
+using Continuity_Blazor_V2.Web.UserPortal.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -47,6 +50,11 @@ namespace Continuity_Blazor.Web
             services.AddSingleton<WeatherForecastService>();
 
             services.AddSingleton<IPostRepository, PostRepository>();
+            services.AddSingleton<IPostsBLL, PostsBLL>();
+            services.AddSingleton<IPostsViewModel, PostsViewModel>();
+            services.AddSingleton<IViewPostViewModel, ViewPostViewModel>(); 
+
+
 
             services.AddTransient<IViewPost, ViewPost>();
             services.AddTransient<ISearchPosts, SearchPosts>();
